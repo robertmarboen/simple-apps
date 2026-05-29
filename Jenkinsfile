@@ -1,6 +1,6 @@
 pipeline {
     agent {label 'devops1-clg'}
-    
+
     stages {
         stage('Checkout') {
             steps {
@@ -19,7 +19,7 @@ pipeline {
             steps {
                sh '''cd app
                npm test
-               npm test:coverage'''
+               npm run test:coverage'''
             }
         }
 
