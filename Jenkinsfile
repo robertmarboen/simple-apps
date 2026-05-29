@@ -25,7 +25,8 @@ pipeline {
 
         stage('Code Analys') {
             steps {
-               sh '''sonar-scanner \
+               sh '''cd app
+                    sonar-scanner \
                         -Dsonar.projectKey=simple-apps \
                         -Dsonar.sources=. \
                         -Dsonar.host.url=http://172.23.8.73:9000 \
