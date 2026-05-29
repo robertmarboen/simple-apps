@@ -1,5 +1,6 @@
 pipeline {
-
+    agent {label 'devops1-clg'}
+    
     stages {
         stage('Checkout') {
             steps {
